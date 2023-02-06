@@ -1,0 +1,7 @@
+#! /usr/local/bin/csi -script                     
+(import (chicken port)                            
+        (chicken process-context))
+
+(print (eval (with-input-from-string              
+                (car (command-line-arguments))    
+                 read)))
